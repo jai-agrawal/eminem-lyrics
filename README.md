@@ -7,6 +7,9 @@ As outlined in data.py, the first thing I needed was the API key which allows fo
 ## Main Code
 I first opened the pickle file containing the lyrics list. I then opened a list of stopwords using NLTK's library, and then added words I found in Eminem's lyrics which were not in said list, assumingly due to their profanitic or slang nature. Further, models were built using TFIDF and Bag-Of-Words(BOW) concepts. While TFIDF is preferred when analysing corpuses, it did not take in an argument of the separate corpuses (albums), and thus I'm not sure how well it performed. The BOW was not that relevant either. I used these vectorizers to transform the data into separate TFIDF and BOW data. It was then that I fed these data into both Latent Dirichlet Allocation (LDA, also used for topic modelling) and NMF models. The best result I found was in the TFIDF-NMF model. Following were the topics found: 
 
+<img width="583" alt="Screenshot 2021-05-15 at 6 19 20 PM" src="https://user-images.githubusercontent.com/77375209/118394755-36f5df00-b664-11eb-8578-93760987c2dd.png">
+
+*excuse the profanity
 ## Evaluation
 While the topics seem obscure, I could find some meaning in them. For example, I would assume Topic #1 with Eminem returning to features, Topic #2 with fatherhood, and Topic #3 has to do with love. Further improvements that need to be made to the code is to find ways to make TFIDF more useful, by incorporating the corpus concept - by inputting the album data separately. 
 ## Future Work
